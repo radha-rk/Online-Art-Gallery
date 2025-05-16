@@ -81,8 +81,3 @@ An Online Art Gallery web application where users can sign up, upload their artw
 
 ---
 
-## 🎓 Credits
-
-- YouTube Tutorial: [Sheryians Coding School](https://www.youtube.com/@sheryians)
-
----
