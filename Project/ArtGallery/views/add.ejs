@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a New Post</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      background-color: white;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background-color: #ddd;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Create a New Post</h1>
+    <hr />
+    <form action="/createpost" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="file">Select Image</label>
+        <input type="file" id="file" name="postimage" required />
+      </div>
+      <div class="form-group">
+        <label for="title" >Title</label>
+        <input type="text" id="title" name="Title" placeholder="Enter title..." required />
+      </div>
+      <div class="form-group">
+        <label for="desc">Description</label>
+        <input type="text" id="desc" name="description" placeholder="Enter description..." />
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Upload Post" />
+      </div>
+    </form>
+  </div>
+</body>
+</html>

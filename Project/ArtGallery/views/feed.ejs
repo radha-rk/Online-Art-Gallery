@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art Feed</title>
+  <link rel="stylesheet" href="/stylesheets/feed.css">
+</head>
+<body>
+
+  <h1>Art Feed</h1>
+
+  <div class="filter-bar">
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <% 
+        const categorySet = new Set();
+        posts.forEach(p => categorySet.add(p.category));
+        categorySet.forEach(cat => { 
+      %>
+        <option value="<%= cat %>"><%= cat %></option>
+      <% }) %>
+    </select>
+  </div>
+
+  <div class="gallery" id="gallery">
+    <% posts.forEach(function(post) { %>
+      <div class="gallery-item" data-category="<%= post.category %>">
+        <img src="/images/uploads/<%= post.image %>" alt="<%= post.title %>" />
+        <div class="title"><%= post.title %></div>
+        <div class="category">Category: <%= post.category %></div>
+        <div class="user">By: <%= post.user.username %></div>
+        <div class="gallery-actions">
+          <button class="btn cart-btn">🛒 Add to Cart</button>
+          <button class="btn buy-btn">💰 Buy Now</button>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+  
+
+  <script>
+    const filter = document.getElementById('categoryFilter');
+    const items = document.querySelectorAll('.gallery-item');
+
+    filter.addEventListener('change', () => {
+      const selected = filter.value;
+      items.forEach(item => {
+        const category = item.getAttribute('data-category');
+        if (selected === 'all' || category === selected) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

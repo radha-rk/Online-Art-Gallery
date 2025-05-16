@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1 class="gallery-title">Online Art Gallery</h1>
+      <p class="header">Login to see more</p>
+
+
+      <% if (error && error.length > 0) { %>
+        <% error.forEach(function(msg) { %>
+          <p class="error"><%= msg %></p>
+        <% }) %>
+      <% } %>
+      
+
+      <form action="/login" method="post">
+        <input type="text"  name="username" placeholder="Username" class="detail" /><br />
+        <input type="password" name="password" placeholder="Password" class="detail" />
+        <input type="submit" class="btn int" value="Login Account"> 
+      </form>
+      <a href="/forgot">Forgot your password?</a>
+
+      
+
+      <footer>
+        <p>
+          By continuing, you agree to Online Art Gallery
+          <b>Terms of Service, Privacy policy.</b>
+        </p>
+        <hr />
+       <a href="/index" > Don't have account yet? sign Up</a>
+      </footer>
+    </div>
+  </div>
+
+
+</body>
+</html>

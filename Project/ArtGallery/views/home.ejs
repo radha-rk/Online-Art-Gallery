@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Art Gallery</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  color: #ffcc70;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background-color: #fff;
+  color: #222;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ffcc70;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Featured Artworks */
+.featured-artworks {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.art-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.art-card {
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.art-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.art-card p {
+  padding: 15px;
+  font-size: 1rem;
+}
+
+/* Feed Section */
+.recent-feed {
+  background-color: #f0f4f8;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.feed-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.feed-item {
+  background: #fff;
+  border-left: 5px solid #ffcc70;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  text-align: left;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🎨 Art Gallery</div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+       
+        <li><a href="/login">Login</a></li>
+        <li><a href="/feed">Feed</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to the Online Art Gallery</h1>
+      <p>Discover and celebrate creativity from artists around the world.</p>
+      <a href="/feed" class="btn">Explore Gallery</a>
+    </div>
+  </section>
+
+  <section class="featured-artworks">
+    <h2>🌟 Featured Artworks</h2>
+    <div class="art-grid">
+      <div class="art-card">
+        <img src="https://i.pinimg.com/736x/e4/81/b7/e481b7911c3e7af092fd05faf067fc77.jpg" alt="Artwork 1">
+        <p><strong>Sunset Bliss</strong><br>by Anaya</p>
+      </div>
+      <div class="art-card">
+        <img src="https://i.pinimg.com/736x/b9/78/4b/b9784badb1fe0bb1ca3ff49b2f0e7eb1.jpg"  alt="Artwork 2">
+        <p><strong>Urban Spirit</strong><br>by Vihaan</p>
+      </div>
+      <div class="art-card">
+        <img src="https://i.pinimg.com/736x/df/9d/fb/df9dfbd1c4296105e03b24c3e3349864.jpg " alt="Artwork 3">
+        <p><strong>Nature’s Song</strong><br>by Meera</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="recent-feed">
+    <h2>📰 Recent Posts</h2>
+    <div class="feed-list">
+      <div class="feed-item">
+        <h3>🖌️ Abstract Realism by Aarav</h3>
+        <p>A deep dive into blending surreal forms with modern expression.</p>
+      </div>
+      <div class="feed-item">
+        <h3>🌸 Floral Emotions by Diya</h3>
+        <p>This new collection uses pastels to highlight emotional resonance.</p>
+      </div>
+      <div class="feed-item">
+        <h3>🔥 Bold Strokes by Rohan</h3>
+        <p>Energetic brushwork gives this piece a strong, dramatic presence.</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
